@@ -4,63 +4,63 @@ import Layout from '../Layout';
 
 export default function SchoolLayout({children}: {children: any}) {
     const navigations = [
-        { name: "Dashboard", href: "", icon: FaCogs, current: true },
+        { name: "Dashboard", href: "/", icon: FaCogs, current: true },
         {
           name: "Classes",
-          href: "classes",
+          href: "/classes",
           icon: FaBuilding,
           current: false,
         },
         {
           name: "Students",
-          href: "students",
+          href: "/students",
           icon: FaUserFriends,
           current: false,
         },
         {
           name: "Staffs",
-          href: "staffs",
+          href: "/staffs",
           icon: FaUserGraduate,
           current: false,
         },
         {
           name: "Courses",
-          href: "courses",
+          href: "/courses",
           icon: FaBookOpen,
           current: false,
         },
         {
           name: "Payment History",
-          href: "fees",
+          href: "/fees",
           icon: FaCashRegister,
           current: false,
         },
         {
           name: "Bills",
-          href: "bill",
+          href: "/bill",
           icon: FaListAlt,
           current: false,
         },
       
         {
           name: "Debt",
-          href: "debt",
+          href: "/debt",
           icon: FaMoneyBillWave,
           current: false,
         },
         {
           name: "Discount",
-          href: "discount",
+          href: "/discount",
           icon: FaDollarSign,
         },
         {
           name: "Scratch Card Pin",
-          href: "pin",
+          href: "/pin",
           icon: FaAsterisk,
         },
         {
           name: "Messages",
-          href: "sms",
+          href: "/sms",
           icon: FaSms,
           current: false,
         }

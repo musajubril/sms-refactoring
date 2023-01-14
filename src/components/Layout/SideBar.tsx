@@ -2,6 +2,7 @@ import React from "react";
 import ActiveSidebarIcon from "./ActiveSidebarIcon";
 import ExpandAndCollapseButton from "./ExpandAndCollapseButton";
 import InActiveSidebarIcon from "./InActiveSidebarIcon";
+import { useLocation } from "react-router";
 
 export default function SideBar({
   navs,
@@ -12,6 +13,9 @@ export default function SideBar({
     icon: any;
   }[];
 }) {
+  const location = useLocation()
+  const path = location.pathname
+  console.log(path)
   return (
     <>
       <div className="w-[78px] pt-[33px] fixed min-h-screen shadow-lg">
@@ -21,9 +25,15 @@ export default function SideBar({
           alt="logo"
         />
         <div className="flex flex-col px-[21px] gap-6 pt-[44px]">
-          <ActiveSidebarIcon Icon={navs[0].icon} />
-          {navs.slice(1, navs?.length).map((nav, i) => (
-            <InActiveSidebarIcon Icon={nav.icon} key={i} />
+          {navs.map((nav, i) => (
+            <>
+            {
+              path === nav.href ?
+              <ActiveSidebarIcon href={nav.href} Icon={nav.icon} key={i} />
+              :
+            <InActiveSidebarIcon href={nav.href} Icon={nav.icon} key={i} />
+            }
+            </>
           ))}
         </div>
       </div>

@@ -7,7 +7,7 @@ import Status from "../components/Status";
 import Input from "../components/FormFields/Input";
 import InputIcon from '../components/FormFields/InputIcon';
 import TextArea from "../components/FormFields/TextArea";
-import StatCard from "../components/StatCard";
+import StatCard from "../components/Cards/StatCard";
 
 export default function Home() {
   return (
@@ -35,10 +35,10 @@ export default function Home() {
       <div className="pt-5">
         <TextArea value={""} required={true} change={()=>{}} label="Enter Full Name" id="test"  description="Enter your full name that will be on ur profile" placeholder="testing" disabled={true} />
       </div>
-      <div className="pt-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {
           ["","","","","","","","","","","","","","","","",""].map(()=>(
-            <StatCard title="Total Income" value="5000" />
+            <StatCard title="Total Income" value="5000" list={[]} />
           ))
         }
       </div>
