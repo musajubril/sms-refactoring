@@ -30,10 +30,10 @@ export default function ClassCourses() {
 //      courseList?.data
 //   ]);
   return (
-    <SchoolLayout>
+    <>
     <div className="py-5 sm:flex sm:items-center sm:justify-between w-full">
       <h3 className="text-lg font-medium leading-6 text-gray-900 sm:block uppercase">{classId} Courses</h3>
       </div>
-  </SchoolLayout>
+  </>
   )
 }

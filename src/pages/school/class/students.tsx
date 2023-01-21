@@ -30,10 +30,10 @@ export default function ClassStundents() {
   React.useEffect(() => {
     setStudents(studentList?.data);
   }, [studentList?.data]);
-  return <SchoolLayout>
+  return <>
     <div className="py-5 sm:flex sm:items-center sm:justify-between w-full">
       <h3 className="text-lg font-medium leading-6 text-gray-900 sm:block uppercase">Students</h3>
       </div>
           <StudentTable students={students} />
-  </SchoolLayout>;
+  </>;
 }

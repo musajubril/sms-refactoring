@@ -3,7 +3,7 @@ import GenderImage from '../../helpers/GenderImage'
 
 export default function Table({head, children}:{head: string[], children: any}) {
   return (
-    <div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200">
+    <div className="w-full mx-auto bg-white shadow-lg rounded-sm border border-gray-200 mt-5">
             <div className="p-3">
                 <div className="overflow-x-auto">
                     <table className="table-auto w-full">

@@ -161,7 +161,7 @@ export default function Students() {
       }
     }
   return (
-    <SchoolLayout>
+    <>
         <Title title={'Students'} btn={{
           size: "md",
           value: "Add Student",
@@ -172,6 +172,6 @@ export default function Students() {
           type: "submit",
         }} />
         <StudentTable students={students} />
-    </SchoolLayout>
+    </>
   )
 }

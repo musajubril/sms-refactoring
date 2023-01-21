@@ -11,7 +11,18 @@ import StatCard from "../components/Cards/StatCard";
 
 export default function Home() {
   return (
-    <SchoolLayout>
+    <>
+      <div className="flex items-center">
+            {/* <img src={localStorage?.schoolLogo} alt="" className="object-center object-cover" /> */}
+            <div className="pt-5 w-full flex flex-col items-start">
+                <div className="text-[#28293D] font-bold text-xl md:text-2xl pb-[10px]">
+                Welcome Back, {localStorage?.schoolName} 👋 
+                </div>
+                <div className="pb-[20px] text-[#555770] font-semibold md:text-xl text-md">
+                Here are some insights for your School's activity
+                </div>
+          </div>
+            </div>
       <div>Home</div>
       <div className="flex gap-8 items-center">
       <Button size="sm" value="Button" click={()=>{}} location='end' disabled={false} type={"button"} />
@@ -42,6 +53,6 @@ export default function Home() {
           ))
         }
       </div>
-    </SchoolLayout>
+    </>
   );
 }

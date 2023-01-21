@@ -22,7 +22,7 @@ export default function Dropdown({ list, Icon }: DropdownType) {
       {({ open }) => (
         <>
           <div>
-            <Menu.Button >
+            <Menu.Button className="cursor-pointer rounded-full p-1 hover:bg-gray-100" >
               {Icon}
             </Menu.Button>
           </div>

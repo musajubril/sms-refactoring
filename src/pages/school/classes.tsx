@@ -7,10 +7,11 @@ import { HOMEROOMS } from "../../api/apiUrl";
 import { queryKeys } from "../../api/queryKey";
 import SchoolLayout from "../../components/Layouts/school.layout";
 import Title from "../../components/Title";
-import { FaBuilding } from "react-icons/fa";
-import StatCard from "../../components/Cards/StatCard";
+import { BiBuildingHouse } from "react-icons/bi";
+import DataCard from "../../components/Cards/DataCard";
 
-export default function SchoolClasses() {
+export default function SchoolClasses(props: any, {drop}:{ drop: any }) {
+  console.log(props, drop)
     const { addToast } = useToasts();
 
     const easysch_token: { school_uid: any } = jwtDecode(
@@ -67,7 +68,7 @@ export default function SchoolClasses() {
     }, [roomval]);
     const [open, setOpen] = React.useState(false);
   return (
-    <SchoolLayout>
+    <>
       <Title
         title="Classes"
         btn={{
@@ -75,7 +76,7 @@ export default function SchoolClasses() {
           value: "Add Class",
           click: () => {},
           location: "end",
-          Icon: FaBuilding,
+          Icon: BiBuildingHouse,
           disabled: false,
           type: "submit",
         }}
@@ -83,14 +84,10 @@ export default function SchoolClasses() {
       <div className="py-5 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
         {rooms?.map(
           (room: { name: string; id: React.Key | null | undefined; }, i: any) => (
-            <StatCard title={""} value={room?.name} key={room?.id} list={[
-                {name: "Students", url: `${room?.id}/students`},
-                {name: "Courses", url: `${room?.id}/courses`},
-                {name: "Bill", url: `${room?.id}/bill`},
-            ]} />
+            <DataCard title={""} value={room?.name} key={room?.id} list={drop} Icon={BiBuildingHouse} />
           )
         )}
       </div>
-    </SchoolLayout>
+    </>
   );
 }

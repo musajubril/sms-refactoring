@@ -15,10 +15,7 @@ export const AuthRoutes = (
     <Route path="/:slug/login" element={<Login />} />
     <Route path="/:slug/otp" element={<OTP />} />
     <Route path="/verify" element={<Verify />} />
-    <Route path="/classes" element={<Classes />} />
-    <Route path="/classes/:classId/students" element={<ClassStundents />} />
-    <Route path="/classes/:classId/courses" element={<ClassCourses />} />
-    <Route path="/classes/:classId/bill" element={<ClassBill />} />
+    
     <Route path="/students" element={<Students />} />
     
     <Route path="*" element={<Home />}></Route>
